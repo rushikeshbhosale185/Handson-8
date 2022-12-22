@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Array of Objects</title>
+</head>
+
+<body>
+    <h1>JS Handson - 8 [Array of {Objects}]</h1>
+
+    <pre><h2> Problem Statement - : let studentRecords = [ 
+                                                    { name: 'John', id: 123, marks : 98 },
+                                                    { name: 'Baba', id: 101, marks : 23 },
+                                                    { name: 'yaga', id: 200, marks : 45 },
+                                                    { name: 'Wick', id: 115, marks : 75 } 
+                                            ];
+    </h2></pre>
+
+    <pre><p>Q.1) We are interested in retrieving only the name of the students and all the names should be in caps.
+
+        ['JOHN', 'BABA', 'YAGA', 'WICK']
+
+    </p></pre>
+    <pre>Ans: <h3>
+        let studentRecords = [];
+
+        for(let i=0; i < studentRecords.length; i++){
+            arr[i] = studentRecords[i].name.toUpperCase();
+        }
+        
+        console.log(arr);
+    </h3></pre><br>
+    <hr>
+
+    <pre><p>Q.2) Suppose we have the same dataset as above but this time we want to get the details of students who scored more than 50 marks.
+
+        [ {name: 'John', id: 123, marks: 98 },{name: 'Wick', id: 115, marks: 75 } ]
+    </p></pre>
+    <pre>Ans:<h3>
+
+                    let array = [];
+
+                    for (let j = 0; j < studentRecords.length; j++){
+                        if(studentRecords[j].marks > 50){
+                            array.push(studentRecords[j]);
+                        }
+                    }
+                    
+                    console.log(array);
+    </h3></pre><br>
+    <hr>
+
+    <pre><p>Q.3) Retrieve the details of students who scored more than 50 marks and have IDs greater than 120.</p></pre>
+    <pre>Ans: <h3>
+                    let ary = [];
+
+                    for (let k = 0; k < studentRecords.length; k++){
+                        if(studentRecords[k].marks > 50 && studentRecords[k].id > 120){
+                            ary.push(studentRecords[k]);
+                        }
+                    }
+
+                    console.log(ary);
+    </h3></pre><br>
+    <hr>
+
+    <pre><p>Q.4) Consider the same scenario we have discussed above, but this time we would like to know the sum total of the marks of the students.
+    </p></pre>
+    <pre>Ans: <h3>
+                        let ar = [0];
+
+                        for(let l = 0; l < studentRecords.length; l++){
+                            ar[0] += studentRecords[l].marks;
+                        }
+
+                        console.log(ar);
+    </h3></pre><br>
+    <hr>
+
+    <pre><p>Q.5) This time we want to get only the names of the students who scored more than 50 marks from the same dataset used above.</p></pre>
+    <pre>Ans: <h3>
+                        let arry = [];
+
+                        for (let x = 0; x < studentRecords.length; x++){
+                            if(studentRecords[x].marks > 50){
+                                arry.push(studentRecords[x].name);
+                            } 
+                        }
+
+                        console.log(arry);
+    </h3></pre><br>
+    <hr>
+
+    <pre><p>Q.6) This time we are required to print the sum of marks of the students with id > 120.</p></pre>
+    <pre>Ans: <h3>
+                        let res = [0];
+
+                        for(let z = 0; z < studentRecords.length; z++){
+                            if(studentRecords[z].id > 120){
+                                res[0] += studentRecords[z].marks;
+                            }
+                        }
+
+                        console.log(res);
+    </h3></pre><br>
+    <hr>
+
+    <pre><p>Q.7) This time we are required to print the total marks of the students with marks greater than 50 after a grace 
+                 of 15 marks has been added to those students who scored less than 50.
+    </p></pre>
+    <pre>Ans: <h3>
+                        let result = [0];
+
+                        for(let m = 0; m < studentRecords.length; m++){
+                            let grace = 15 + studentRecords[m].marks;
+                            if(grace > 50){
+                                result[0] += studentRecords[m].marks;
+                            }
+                        }
+
+                        console.log(result);
+    </h3></pre><br>
+    <hr>
+
+    <pre><p>Q.8) Create 6 objects , each object will have name, class, roll no as properties. Store these objects in an array of objects. </p></pre>
+    <pre>Ans: <h3>
+                        const obj1 = {
+                            name : "Rushikesh",
+                            class : "XIIth",
+                            roll_no : 01
+                        };
+                        const obj2 = {
+                            name : "Anant",
+                            class : "Xth",
+                            roll_no : 02 
+                        };
+                        const obj3 = {
+                            name : "Faizan",
+                            class : "XVth",
+                            roll_no : 03 
+                        };
+                        const obj4 = {
+                            name : "Aniket",
+                            class : "VIIIth",
+                            roll_no : 04
+                        };
+                        const obj5 = {
+                            name : "Satish",
+                            class : "Xth",
+                            roll_no : 05
+                        };
+                        const obj6 = {
+                            name : "Chetan",
+                            class : "XVIIIth",
+                            roll_no : 06
+                        };
+                        
+                        
+                        let req_result = [obj1,obj2,obj3,obj4,obj5,obj6];
+                        
+                        console.log(req_result);
+                        
+    </h3></pre><br>
+    <hr>
+</body>
+
+</html>
